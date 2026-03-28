@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>الرئيسية - KMB</title>
+    <link rel="stylesheet" href="Home.css">
+</head>
+<body>
+    <nav>
+        <h2>KMB System</h2>
+        <button onclick="logoutUser()">خروج</button>
+    </nav>
+    <main>
+        <div class="welcome-card">
+            <h1>مرحباً بك في لوحة التحكم </h1>
+            <p>لقد سجلت دخولك بنجاح إلى نظام NoSQL الاحترافي</p>
+        </div>
+    </main>
+
+    <script>
+        // استخدام وظيفة عادية وبسيطة جداً
+        function logoutUser() {
+            console.log("تم الضغط على زر الخروج"); // للتأكد في المتصفح
+            alert("تم تسجيل الخروج.. نراكم قريباً!");
+            
+            // جرب هذا المسار الذي يعود للخلف خطوة واحدة ثم يفتح index.html
+            // لضمان الوصول للملف الصحيح في GitHub Pages
+            window.location.href = "index.html";
+        }
+    </script>
+</body>
+</html>
