@@ -3,13 +3,13 @@ import { getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } f
 
 // === ضع كودك (Config) الذي نسخته من Firebase هنا ===
 const firebaseConfig = {
-  apiKey: "AIzaSyCWzUDzWcTbU1oTi-EIosRS8KlEus2wr5Q",
-  authDomain: "kmb-project-e8baa.firebaseapp.com",
-  projectId: "kmb-project-e8baa",
-  storageBucket: "kmb-project-e8baa.firebasestorage.app",
-  messagingSenderId: "76861686082",
-  appId: "1:76861686082:web:b874ce87ae497f2e6448db",
-  measurementId: "G-VD9QR1N6KE"
+  apiKey: "AIzaSyCRd-nKwNcPbTh9mR2RklYb4xx_0fdMYk0",
+  authDomain: "ptoject99.firebaseapp.com",
+  projectId: "ptoject99",
+  storageBucket: "ptoject99.firebasestorage.app",
+  messagingSenderId: "326620617032",
+  appId: "1:326620617032:web:760c3e0f4ce45a59dcfb7d",
+  measurementId: "G-TNCD10W3TY"
 };
 
 const app = initializeApp(firebaseConfig);
