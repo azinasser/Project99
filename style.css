@@ -1,0 +1,68 @@
+:root {
+    --primary: #00f2fe;
+    --secondary: #4facfe;
+    --accent: #f093fb;
+    --bg-dark: #0f172a;
+}
+
+body {
+    margin: 0; padding: 0;
+    background-color: var(--bg-dark);
+    font-family: 'Segoe UI', sans-serif;
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; overflow: hidden;
+}
+
+/* الخلفية المتحركة الزاهية والداكنة */
+.bg-animate {
+    position: fixed; width: 100%; height: 100%;
+    z-index: -1; overflow: hidden;
+    background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+}
+
+.circle {
+    position: absolute; width: 300px; height: 300px;
+    background: linear-gradient(var(--primary), var(--accent));
+    filter: blur(80px); border-radius: 50%; opacity: 0.4;
+    animation: move 20s infinite alternate;
+}
+
+.circle:nth-child(2) { background: var(--secondary); left: 50%; animation-delay: -5s; }
+.circle:nth-child(3) { background: #f5576c; bottom: 0; right: 0; animation-delay: -10s; }
+
+@keyframes move {
+    from { transform: translate(-10%, -10%); }
+    to { transform: translate(20%, 20%); }
+}
+
+/* صندوق الزجاج */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px; padding: 40px;
+    width: 380px; text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+}
+
+.glow-text { color: white; text-shadow: 0 0 15px var(--primary); }
+
+input {
+    width: 90%; padding: 15px; margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px; color: white; outline: none; transition: 0.3s;
+}
+
+input:focus { border-color: var(--primary); box-shadow: 0 0 10px var(--primary); }
+
+.btn-primary {
+    width: 100%; padding: 15px; border-radius: 12px; border: none;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    color: white; font-weight: bold; cursor: pointer; transition: 0.4s;
+}
+
+.btn-primary:hover { letter-spacing: 2px; box-shadow: 0 0 20px var(--primary); }
+
+.error-msg { color: #ff4d4d; font-size: 0.9em; display: none; margin-bottom: 10px; }
+.toggle-text { margin-top: 20px; color: #cbd5e1; cursor: pointer; font-size: 0.85em; }
